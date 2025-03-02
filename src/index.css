@@ -1,0 +1,103 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --primary: #FF5722;
+  --primary-light: #FF8A65;
+  --primary-dark: #E64A19;
+  --secondary: #121212;
+  --secondary-light: #2C2C2C;
+  --secondary-dark: #000000;
+  --accent: #FFC107;
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+  
+  body {
+    @apply bg-white dark:bg-secondary text-secondary dark:text-white font-sans;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-heading font-bold;
+  }
+}
+
+@layer components {
+  .container {
+    @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8;
+  }
+  
+  .btn {
+    @apply inline-flex items-center justify-center px-6 py-3 rounded-md font-medium transition-all duration-300 focus:outline-none;
+  }
+  
+  .btn-primary {
+    @apply btn bg-primary text-white hover:bg-primary-dark;
+  }
+  
+  .btn-outline {
+    @apply btn border-2 border-primary text-primary hover:bg-primary hover:text-white;
+  }
+  
+  .section-title {
+    @apply text-3xl md:text-4xl font-bold mb-6 relative inline-block;
+  }
+  
+  .section-title::after {
+    content: '';
+    @apply absolute bottom-0 left-0 w-full h-1 bg-primary;
+  }
+  
+  .card {
+    @apply bg-white dark:bg-secondary-light rounded-lg shadow-lg overflow-hidden transition-all duration-300 hover:shadow-xl;
+  }
+  
+  .nav-link {
+    @apply px-3 py-2 text-base font-medium rounded-md transition-colors duration-300;
+  }
+  
+  .nav-link-active {
+    @apply text-primary;
+  }
+  
+  .skill-bar {
+    @apply h-2 bg-gray-200 dark:bg-gray-700 rounded-full overflow-hidden;
+  }
+  
+  .skill-progress {
+    @apply h-full bg-gradient-to-r from-primary to-accent;
+  }
+}
+
+.gradient-text {
+  @apply bg-clip-text text-transparent bg-gradient-to-r from-primary to-accent;
+  min-width: 100%;
+  line-height: 1.2;
+}
+
+.orange-gradient-bg {
+  background: linear-gradient(135deg, var(--primary-light), var(--primary-dark));
+}
+
+.section {
+  @apply py-16 md:py-24;
+}
+
+.project-card:hover .project-overlay {
+  opacity: 1;
+}
+
+.social-icon {
+  @apply w-10 h-10 flex items-center justify-center rounded-full bg-white dark:bg-secondary-light text-primary hover:bg-primary hover:text-white transition-all duration-300;
+}
+
+#JotformAgent-019556aa5d93714fb02aa59e06d622367b5e {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 1000;
+}
