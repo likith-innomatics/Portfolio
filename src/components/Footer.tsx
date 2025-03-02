@@ -12,7 +12,7 @@ const Footer: React.FC = () => {
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
           <div className="col-span-1 md:col-span-2">
             <Link to="hero" smooth={true} duration={500} className="cursor-pointer">
-              <h2 className="text-2xl font-bold gradient-text mb-4">John Doe</h2>
+              <h2 className="text-2xl font-bold gradient-text mb-4">G N Likith Yadav</h2>
             </Link>
             <p className="text-gray-400 mb-6 max-w-md">
               A passionate Full Stack Developer specializing in building exceptional digital experiences.
